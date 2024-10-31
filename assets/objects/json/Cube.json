@@ -1,0 +1,36 @@
+{
+  "id": "d561fa56-9f99-459f-9888-da6fdbdc2ef4",
+  "meta": {
+    "name": "Cube"
+  },
+  "isActive": true,
+  "child": [],
+  "components": [
+    {
+      "name": "Transform",
+      "data": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "data": {
+        "size": 5.0
+      }
+    }
+  ]
+}
