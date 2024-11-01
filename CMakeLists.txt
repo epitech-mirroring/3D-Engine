@@ -21,6 +21,8 @@ target_link_libraries(demo-3D-engine PUBLIC StellarForge3D StellarForgeGraphics3
 
 target_sources(demo-3D-engine
         PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/assets/objects/scripts/RotatingCube.hpp
         PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/assets/objects/scripts/RotatingCube.cpp
 )
