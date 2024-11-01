@@ -13,10 +13,11 @@ link_directories(libs)
 
 find_package(glm REQUIRED)
 find_package(raylib REQUIRED)
+find_package(glfw3 REQUIRED)
 
 add_executable(demo-3D-engine)
 
-target_link_libraries(demo-3D-engine PUBLIC StellarForge3D StellarForgeGraphics3D StellarForgePhysics StellarForgeCommon glm::glm raylib)
+target_link_libraries(demo-3D-engine PUBLIC StellarForge3D StellarForgeGraphics3D StellarForgePhysics StellarForgeCommon glm::glm raylib glfw)
 
 target_sources(demo-3D-engine
         PUBLIC
