@@ -1,0 +1,12 @@
+[tool_requires]
+cmake/3.29.7
+
+[requires]
+glm/1.0.1
+raylib/4.0.0
+gtest/1.15.0
+glfw/3.4.0
+
+[generators]
+CMakeDeps
+CMakeToolchain
