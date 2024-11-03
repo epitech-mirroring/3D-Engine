@@ -6,9 +6,9 @@
 ** You can even have multiple lines if you want !
 */
 
-#include "engine3D/Engine3D.hpp"
-#include "common/factories/ComponentFactory.hpp"
-#include "graphics3D/components/Cube.hpp"
+#include "StellarForge/Engine3D/Engine3D.hpp"
+#include "StellarForge/Common/factories/ComponentFactory.hpp"
+#include "StellarForge/Graphics3D/components/Cube.hpp"
 #include "assets/objects/scripts/RotatingCube.hpp"
 #include <iostream>
 

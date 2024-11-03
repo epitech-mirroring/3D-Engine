@@ -9,9 +9,9 @@
 #define ROTATINGCUBE_HPP
 
 #include <chrono>
-#include "common/components/CPPMonoBehaviour.hpp"
-#include "common/components/Transform.hpp"
-#include "common/json/JsonObject.hpp"
+#include "StellarForge/Common/components/CPPMonoBehaviour.hpp"
+#include "StellarForge/Common/components/Transform.hpp"
+#include "StellarForge/Common/json/JsonObject.hpp"
 
 class RotatingCube final : public CPPMonoBehaviour {
 public:
@@ -27,17 +27,20 @@ public:
     IComponent *clone (IObject *owner) const override;
     void deserialize(const json::IJsonObject *data) override;
     void end() override;
-    json::IJsonObject *serializeData() override;
+    json::IJsonObject *serializeData() const override;
 private:
     float speed = 1.00f;
 
 #ifdef _WIN32
     std::chrono::steady_clock::time_point startTime;
     std::chrono::steady_clock::time_point actualTime;
-#else
+#elif defined(__linux__)
     std::chrono::system_clock::time_point startTime;
     std::chrono::system_clock::time_point actualTime;
-#endif // _WIN32
+#else // macOS
+    std::chrono::steady_clock::time_point startTime;
+    std::chrono::steady_clock::time_point actualTime;
+#endif
 };
 
 #endif //ROTATINGCUBE_HPP

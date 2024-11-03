@@ -24,7 +24,7 @@ void RotatingCube::update() {
     }
 }
 
-void RotatingCube::setSpeed(float newSpeed) {
+void RotatingCube::setSpeed(const float newSpeed) {
     speed = newSpeed;
 }
 
@@ -42,6 +42,6 @@ void RotatingCube::deserialize(const json::IJsonObject *data) {}
 
 void RotatingCube::end() {}
 
-json::IJsonObject *RotatingCube::serializeData() {
+json::IJsonObject *RotatingCube::serializeData() const {
     return nullptr;
 }
